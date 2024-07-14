@@ -19,7 +19,7 @@ namespace database {
 			json_data = nlohmann::json::parse(json_file_read);
 		}
 		void set(const std::string& param) {
-			const std::lock_guard<std::shared_mutex> lock(locker);
+			const std::unique_lock<std::shared_mutex> lock(locker);
 			std::string value = param.substr(param.find("=") + 1, param.size() - param.find("=") - 1);
 			json_data[param.substr(0, param.find("="))] = value;
 			json_file_write.open(json_file_path);
@@ -28,7 +28,7 @@ namespace database {
 		
 		}
 		std::string get(const std::string& param) {
-			const std::lock_guard<std::shared_mutex> lock(locker);
+			const std::shared_lock<std::shared_mutex> lock(locker);
 			if (json_data.find(param) != json_data.end()) {
 				return to_string(json_data.at(param));
 			}
