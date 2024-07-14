@@ -1,6 +1,7 @@
 ﻿#include "Server.hpp"
 
 int main(void) {
+	using namespace httplib;
 #ifdef CPPHTTPLIB_OPENSSL_SUPPORT
 	SSLServer svr(SERVER_CERT_FILE, SERVER_PRIVATE_KEY_FILE);
 #else
@@ -12,7 +13,6 @@ int main(void) {
 		printf("config.txt has an error...\n");
 		return -1;
 	}
-
 	if (!svr.is_valid()) {
 		printf("server has an error...\n");
 		return -1;
