@@ -1,3 +1,3 @@
 # Server-Client
 Тестовое создание на собеседование
-В папке example лежат скомпилированные .exe и config.txt
+В папке example лежит config.txt
