@@ -1,10 +1,11 @@
 ﻿//DDoS машина
-#include "client.hpp"
+#include "Client.hpp"
 
 const char* HOST = "localhost";
 const int PORT = 48424;
 
 void send_request(const char* label) {
+	using namespace httplib;
 	Client cli(HOST, PORT);
 
 	std::cout << "Send " << label << " request" << std::endl;
@@ -21,6 +22,7 @@ void send_request(const char* label) {
 
 
 int main(void) {
+
 	std::mt19937 engine;
 	engine.seed(std::time(nullptr));
 
