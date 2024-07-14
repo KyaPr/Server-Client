@@ -1,0 +1,4 @@
+C:/Users/YK/source/repos/ServerClient/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/YK/source/repos/ServerClient/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/YK/source/repos/ServerClient/build/Server/CMakeFiles/Server.dir
+C:/Users/YK/source/repos/ServerClient/build/Client/CMakeFiles/Client.dir
